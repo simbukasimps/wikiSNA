@@ -1,0 +1,169 @@
+/* Keep basic body/html styles if needed, Bootstrap handles most */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* Sidebar adjustments if necessary */
+.sidebar {
+    background-color: #f8f9fa; /* Light background for sidebar */
+}
+
+/* Graph container styling */
+#graph-container {
+    width: 100%;
+    position: relative; /* Needed for absolute positioning of loading spinner */
+}
+
+#graph-container svg {
+    width: 100%;
+    height: 100%;
+    display: block; /* Prevents extra space below svg */
+}
+
+/* Loading indicator styles (can be customized) */
+.loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    font-style: italic;
+    color: #6c757d;
+}
+
+/* Search suggestions */
+#suggestions .list-group-item {
+    cursor: pointer;
+}
+#suggestions .list-group-item:hover {
+    background-color: #e9ecef;
+}
+
+/* D3 Graph Styles (Keep these from your original style.css or adapt) */
+.link {
+    stroke: #999;
+    stroke-opacity: 0.6;
+    stroke-width: 1.5px;
+}
+
+.node text {
+    font-size: 10px;
+    fill: #333;
+    pointer-events: none; /* Allow clicking through text to underlying node element if needed */
+    text-anchor: middle;
+    dominant-baseline: central;
+}
+
+.node circle { /* Example if you use circles for nodes */
+    stroke: #fff;
+    stroke-width: 1.5px;
+}
+
+.node.current text { /* Style for the currently loaded page node */
+    font-weight: bold;
+    fill: #0d6efd; /* Bootstrap primary color */
+}
+
+.path-highlight {
+    stroke: #dc3545 !important; /* Bootstrap danger color */
+    stroke-width: 3px !important;
+    stroke-opacity: 0.8 !important;
+}
+
+.node-highlight text {
+    font-weight: bold;
+    font-size: 1.1em;
+     fill: #dc3545;
+}
+
+.highlight-yellow text { /* For anomalies */
+   fill: #ffc107; /* Bootstrap warning color */
+   font-weight: bold;
+}
+
+/* Community colors (can be kept or adapted) */
+.community-0 { color: #3366cc; }
+.community-1 { color: #dc3912; }
+.community-2 { color: #ff9900; }
+.community-3 { color: #109618; }
+.community-4 { color: #990099; }
+/* ... add more as needed ... */
+.community-0-fill { fill: #3366cc; }
+.community-1-fill { fill: #dc3912; }
+.community-2-fill { fill: #ff9900; }
+.community-3-fill { fill: #109618; }
+.community-4-fill { fill: #990099; }
+/* ... add more fill colors ... */
+
+/* Mode description styling */
+.mode-description {
+    font-size: 0.9rem;
+    color: #6c757d;
+    margin-top: 0.5rem;
+    padding: 0.5rem;
+    background-color: #e9ecef;
+    border-radius: 0.25rem;
+}
+
+/* iframe for wiki content */
+#wiki-iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* Style for analysis results tables */
+#analysis-results-container table {
+    font-size: 0.9em;
+}
+
+/* Ensure Font Awesome icons are aligned */
+.btn i {
+    vertical-align: middle;
+}
+
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+
+/* Add these color definitions */
+:root {
+    --bs-community-0-color: #3366cc;
+    --bs-community-1-color: #dc3912;
+    --bs-community-2-color: #ff9900;
+    --bs-community-3-color: #109618;
+    --bs-community-4-color: #990099;
+    --bs-community-5-color: #0099c6;
+    --bs-community-6-color: #dd4477;
+    --bs-community-7-color: #66aa00;
+    --bs-community-8-color: #b82e2e;
+    --bs-community-9-color: #316395;
+  }
+  
+  /* Optional: Style for the accordion buttons */
+  .accordion-button {
+      font-size: 0.95rem;
+  }
+  
+  .accordion-button .badge {
+      font-size: 0.75em; /* Make badge slightly smaller relative to button text */
+  }
+  
+  .accordion-body ul {
+      max-height: 300px; /* Limit height of member list */
+      overflow-y: auto;
+  }
+  
+  .accordion-body .list-group-item {
+      border: none; /* Cleaner look inside accordion */
+      padding-left: 0;
+      padding-right: 0;
+  }
+  /* ... rest of your css ... */
